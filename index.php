@@ -3,17 +3,15 @@
 <head>
 	<meta charset="UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<script 
-		src="https://kit.fontawesome.com/fdfb0448c2.js" 
-		crossorigin="anonymous">
-	</script> <!--fontawesome-->
+	<meta http-equiv="X-UA-Compatible"content="IE=edge" >
+	<script src="https://kit.fontawesome.com/fdfb0448c2.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="style.css"/>
 	<title>Hjr Bakery</title>
 
 </head>
 <body>
 	<header class="header">
-		<a href="" class="logo"><img src="img/Logo.png"></a>
+		<a class="logo"><img src="img/Logo.png"></a>
 		<nav class="navbar">
 			<a href="#Home">Home</a>
 			<a href="#Cakes">Cakes</a>
@@ -23,8 +21,8 @@
 			<a href="#contact">Contact</a>
 		</nav>
 		<div class="icons">
-			<div class="search-icon"><i class="fas fa-search"></i></div>
-			<div class="cart-icon"><i class="fas fa-cart-arrow-down"></i></div>
+			<div class="search-icon" onclick="toggleSearchForm()" ><i class="fas fa-search"></i></div>
+			<div class="cart-icon" id="cartIcon" onclick="toggleCartItemsContainer()"><i class="fas fa-cart-arrow-down"></i></div>
 			<div class="menu-icon"><i class="fas fa-bars"></i></div>
 		</div>
 		<div class="search-form" class="hidden">
@@ -298,7 +296,7 @@
 			</div>
 		</div>
 	</section>
-<!--------------------contact section----------------------->
+<!-------------------------------------contact section----------------------------------------->
 	<section class="contact" id="contact">
 		<h1 class="title"><span>Contact </span> us</h1>
 		<div class="contents">
@@ -306,7 +304,7 @@
 				loading="lazy" 
 				referrerpolicy="no-referrer-when-downgrade">
 			</iframe>
-			<form method="post" action="traitement.php" >
+			<form method="post" action="insert.php" >
 				<h3>Get in touch</h3>
 				<div class="input-box">
 					<span class="fas fa-user"></span>
@@ -318,7 +316,7 @@
 				</div>
 				<div class="input-box">
 					<span class="fas fa-phone"></span>
-					<input type="text" name="phone" placeholder="phone" required>
+					<input type="number" name="phone" placeholder="phone" required>
 				</div>
 				<button class="btn" type="submit" name="submit">Contact Now</button>
 	
@@ -330,10 +328,10 @@
 <!----------------------footer------------------------------->	
 <footer class="footer">
         <div class="social-media">
-        	<a href="" class="fab fa-facebook-f"></a>   
+        	<a href="https://web.facebook.com/profile.php?id=61553566077736" class="fab fa-facebook-f"></a>   
 			<a href="" class="fab fa-twitter"></a> 
-			<a href="" class="fab fa-instagram"></a> 
-			<a href="" class="fab fa-linkedin"></a> 
+			<a href="https://www.instagram.com/hjrbakery/" class="fab fa-instagram"></a> 
+			<a href="https://www.linkedin.com/company/hjrbakery/" class="fab fa-linkedin"></a> 
 			<a href="" class="fab fa-pinterest"></a>
 		</div>
 		<div class="links">
@@ -348,6 +346,6 @@
 			created by <span>Hajar Hijaoui</span> | all rights reserved. 
 		</div>
 </footer>
-	<script defer src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
